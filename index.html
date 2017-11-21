@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Math-Match-Game</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+</head>
+
+    <body>
+        <header>MATCH-MATCH GAME</header>
+        <main>
+            <section id="gameBoard" class="board"></section>
+            <footer>
+                <article class="timer">
+                    <h3 class="info">Time:&nbsp;<span class="clock"> </span></h3>
+                </article>
+
+                <article class="counter">
+                    <h3 class="info">Moves: <span id="moves" class="data"></span></h3>
+                </article>
+            </footer>
+
+            <div id="startModal" class="modal">
+                <button id="openModal">Open Modal</button>
+                <div class="modalContent">
+                    <h2 class="siteTitle start">MATCH-MATCH GAME</h2>
+                    <h4 >This is a counter game where the object is to find pairs.<br>
+                        You can also choose card`s skirt and game difficult.</h4>
+                    <h3 class="tagLine start">HOW TO PLAY:</h3>
+
+                    <ol class="gameRules">
+                        <li >When the game begins, all pictures are hidden.</li>
+                        <li>Select 2 cards to try to match the picture.</li>
+                        <li>If you match the pictures you can go again.</li>
+                        <li>If they dont`t match the computer turn them.</li>
+                        <li>The player that finds all pairs wins!</li>
+                    </ol>
+
+                    <div class="tagLine start" >
+                        <label >Select A Color: </label>
+                        <select class="skirtForCard" id="cardSkirt">
+                            <option value="White">White</option>
+                            <option value="Red">Red</option>
+                            <option value="Green">Green</option>
+                        </select>
+                    </div>
+
+                    <h3 class="tagLine start">Choose a level!!!</h3>
+                    <button id="easy-level" class="levelButton">Easy</button>
+                    <button id="medium-level" class="levelButton">Medium</button>
+                    <button id="hard-level" class="levelButton">Hard</button>
+                  </div>
+            </div>
+
+
+            <div id="winModal" class="modal">
+                <div class="modalContent">
+                    <h2 class="congratulation">You are the winner!!!</h2>
+
+                    <article class="modalResults">
+                        <h3 class="info">Star Rating</h3>
+                        <div class="stars" id="finalResult">  </div>
+                    </article>
+
+                    <article class="modalResults">
+                        <h3 class="info">Time</h3>
+                        <div class="clock"> </div>
+                    </article>
+
+                    <article class="restart">
+                        <p class="winText">Do you want to play again?</p>
+                        <button id="restart">Restart Game</button>
+                    </article>
+                 </div>
+            </div>
+
+            <script src="js/game-settings.js"></script>
+            <script src="js/game.js"></script>
+
+        </main>
+    </body>
+</html>
